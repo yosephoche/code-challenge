@@ -137,7 +137,7 @@
 
     <div id="modal-rating" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <div id="bg-gray" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
             <!-- <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span> -->
      
             <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
@@ -198,17 +198,18 @@
 </body>
 
 <script type="text/javascript">
+    document.addEventListener('click', (event) => {
+        const boolIsOutside = document.getElementById("bg-gray").isSameNode(event.target);
+        console.log(boolIsOutside)
+        if (boolIsOutside) {
+            document.getElementById('modal-rating').classList.add('hidden');
+        }
+    });
     function openModal(modalId) {
         console.log(modalId)
         modal = document.getElementById(modalId)
         modal.classList.remove('hidden')
     }
-    
-    function closeModal() {
-        modal = document.getElementById('modal-rating')
-        modal.classList.add('hidden')
-    }
     </script>
-
 
 </html>
