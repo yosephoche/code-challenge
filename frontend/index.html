@@ -11,124 +11,35 @@
 </head>
 
 <body>
-    <div class="container mx-auto px-56">
+    <div id="container" class="container mx-auto px-56">
         <div class="my-20">
-            <h1 class="text-4xl font-bold text-gray-900">
-                The Minimalist Entrepreneur
-            </h1>
+            <h1 id="book-title" class="text-4xl font-bold text-gray-900"></h1>
         </div>
 
         <div class="divide-y divide-solid space-y-10">
             <div class="flex space-x-4">
                 <div class="">
-                    <h4 class="font-sans text-3xl decoration-auto">3.8</h4>
+                    <h4 id="rate-number" class="font-sans text-3xl decoration-auto"></h4>
                 </div>
                 <div class="flex justify-between w-full">
                     <div>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                            
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
-                              </svg>
-                        </button>
-        
+                        <div class="starRatingContainer">
+                            <div class="ratingHeader"></div>
+                        </div>
+                        <div class="ratingHolder"></div>
                     </div>
+
                     <div>
                         <button id="card_open" type="button" class="outline outline-2 pr-2 pl-2 py-1 px-1 mr-1 mb-1 text-base font-medium shadow-sm text-gray-600/90 outline-gray-500/50 hover:bg-gray-50" onclick="openModal('modal-rating')">Add review</button>
                     </div>
                 </div>
             </div>
 
-            <div class="flex-col">
+            <div id="main-div" class="flex-col">
                 <div class="">
                     <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-10">
                         Reviews
                     </h2>
-                </div>
-                <div class="flex content-center space-x-4 mb-10">
-                    <div>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
-                              </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
-                              </svg>
-                        </button>
-                    </div>
-                    <div class="">
-                        <span class="text-lg decoration-auto">3 Nice book</span>
-                    </div>
-                </div>
-
-                <div class="flex content-center space-x-4 mb-10">
-                    <div>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-8 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
-                              </svg>
-                        </button>
-                    </div>
-                    <div class="">
-                        <span class="text-lg decoration-auto">4 Nice book</span>
-                    </div>
                 </div>
                 
             </div>
@@ -136,20 +47,6 @@
 
     </div>
 
-    <div>
-        <svg style="width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <defs>
-            <linearGradient id="half" x1="0" x2="100%" y1="0" y2="0">
-              <stop offset="50%" stop-color="#fed94b"></stop>
-              <stop offset="50%" stop-color="#f7f0c3"></stop>
-            </linearGradient>
-      
-            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="star">
-              <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
-            </symbol>
-          </defs>
-        </svg>
-    </div>
 
     <div id="modal-rating" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -165,22 +62,11 @@
                             <div class="flex flex-col space-y-6">
                                 <div class="mt-2">
                                     <p class="text-sm text-gray-500 mb-5">Rating</p>
-                                    <div class="star-rating" id="star-rating">
-                                        <svg id="star" class="c-star active" width="32" height="32" viewBox="0 0 32 32">
-                                          <use xlink:href="#star"></use>
-                                        </svg>
-                                        <svg id="star" class="c-star active" width="32" height="32" viewBox="0 0 32 32">
-                                          <use xlink:href="#star"></use>
-                                        </svg>
-                                        <svg id="star" class="c-star active" width="32" height="32" viewBox="0 0 32 32">
-                                          <use xlink:href="#star"></use>
-                                        </svg>
-                                        <svg id="star" class="c-star active" width="32" height="32" viewBox="0 0 32 32">
-                                          <use xlink:href="#star"></use>
-                                        </svg>
-                                        <svg id="star" class="c-star active" width="32" height="32" viewBox="0 0 32 32">
-                                          <use xlink:href="#star"></use>
-                                        </svg>
+                                    <div>
+                                        <div id="starRatingContainer" class="starRatingContainer">
+                                            <div id="addReview" class="addReview"></div>
+                                        </div>
+                                        <div class="ratingHolder"></div>
                                     </div>
                                 </div>
     
@@ -195,9 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                    <button type="button" onclick="closeModal()" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Close</button>
-                </div> -->
+                
             </div>
         </div>
     </div>
@@ -205,6 +89,7 @@
     
 </body>
 
+<script src="https://starratingjs.netlify.app/index.js"></script>
 <script src="./app.js" type="text/javascript"></script>
 
 </html>
