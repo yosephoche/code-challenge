@@ -5,26 +5,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Rating Challenges</title>
-    <base href="/">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .star-rating {
-            display: flex;
-            justify-content: left;
-            gap: 4px;
-        }
-        
-        .c-star {
-            width: var(--size, 32px);
-            height: var(--size, 32px);
-            /* fill: lightgrey; */
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
 
 <body>
-    <div class="container mx-auto px-80">
+    <div class="container mx-auto px-56">
         <div class="my-20">
             <h1 class="text-4xl font-bold text-gray-900">
                 The Minimalist Entrepreneur
@@ -218,54 +205,6 @@
     
 </body>
 
-<script type="text/javascript">
-    const modal = document.getElementById('modal-rating');
-    closeModal()
-
-    const starElements = document.querySelectorAll('.c-star');
-    const reviewInput = document.getElementById('review');
-    const btnSubmit = document.getElementById('submit');
-    let rate;
-
-    starElements.forEach((star, clickedIndex) => {
-        star.setAttribute("fill", "lightgrey")
-        star.addEventListener("mouseover", () => {
-            star.starValue = clickedIndex+1
-            starElements.forEach((otherStar, otherIndex) => {
-                if (otherIndex <= clickedIndex) {
-                    otherStar.setAttribute("fill", "#fed94b")
-                }else{
-                    otherStar.setAttribute("fill", "lightgrey")
-                }
-            });
-        });
-        star.addEventListener("click", () => {
-            rate = star.starValue;
-        })
-    });
-
-    btnSubmit.addEventListener("click", () => {
-        const review = reviewInput.value; 
-        // TODO: call API to save review here
-
-        closeModal()
-    });
-
-    document.addEventListener('click', (event) => {
-        const boolIsOutside = document.getElementById("bg-gray").isSameNode(event.target);
-        if (boolIsOutside) {
-            closeModal()
-        }
-    });
-    
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.classList.remove('hidden');
-    }
-
-    function closeModal() {
-        modal.classList.add('hidden');
-    }
-</script>
+<script src="./app.js" type="text/javascript"></script>
 
 </html>

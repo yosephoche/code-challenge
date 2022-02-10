@@ -1,11 +1,11 @@
 .star-rating {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-  }
-  
+  display: flex;
+  justify-content: left;
+  gap: 4px;
+}
+
 .c-star {
-    width: var(--size, 32px);
-    height: var(--size, 32px);
-    fill: lightgrey;
+  width: var(--size, 32px);
+  height: var(--size, 32px);
+  /* fill: lightgrey; */
 }
